@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-:root {
+:root{
   --base-clr: #11121a;
   --line-clr: #42434a;
   --hover-clr: #222533;
@@ -8,27 +7,24 @@
   --accent-clr: #5e63ff;
   --secondary-text-clr: #b0b3c1;
 }
-
-* {
+*{
   margin: 0;
   padding: 0;
 }
-
-html {
+html{
   font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5rem;
 }
-
-body {
+body{
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: var(--base-clr);
+  background-color: rgb(129, 183, 238);
+
   color: var(--text-clr);
   display: grid;
   grid-template-columns: auto 1fr;
 }
-
-#sidebar {
+#sidebar{
   box-sizing: border-box;
   height: 100vh;
   width: 250px;
@@ -42,36 +38,30 @@ body {
   overflow: hidden;
   text-wrap: nowrap;
 }
-
-#sidebar.close {
+#sidebar.close{
   padding: 5px;
   width: 60px;
 }
-
-#sidebar ul {
+#sidebar ul{
   list-style: none;
 }
-
-#sidebar>ul>li:first-child {
+#sidebar > ul > li:first-child{
   display: flex;
   justify-content: flex-end;
   margin-bottom: 16px;
-
-  .logo {
+  .logo{
     font-weight: 600;
   }
 }
-
-#sidebar ul li.active a {
+#sidebar ul li.active a{
   color: var(--accent-clr);
 
-  svg {
+  svg{
     fill: var(--accent-clr);
   }
 }
 
-#sidebar a,
-#sidebar .logo {
+#sidebar a, #sidebar .logo{
   border-radius: .5em;
   padding: .85em;
   text-decoration: none;
@@ -81,46 +71,38 @@ body {
   gap: 1em;
 }
 
-#sidebar svg {
+#sidebar svg{
   flex-shrink: 0;
   fill: var(--text-clr);
 }
-
-#sidebar a span {
+#sidebar a span{
   flex-grow: 1;
 }
-
-#sidebar a:hover {
+#sidebar a:hover{
   background-color: var(--hover-clr);
 }
-
-#sidebar .sub-menu {
+#sidebar .sub-menu{
   display: grid;
   grid-template-rows: 0fr;
   transition: 300ms ease-in-out;
 
-  >div {
+  > div{
     overflow: hidden;
   }
 }
-
-#sidebar .sub-menu.show {
+#sidebar .sub-menu.show{
   grid-template-rows: 1fr;
 }
-
-.dropdown-btn svg {
+.dropdown-btn svg{
   transition: 200ms ease;
 }
-
-.rotate svg:last-child {
+.rotate svg:last-child{
   rotate: 180deg;
 }
-
-#sidebar .sub-menu a {
+#sidebar .sub-menu a{
   padding-left: 2em;
 }
-
-#toggle-btn {
+#toggle-btn{
   margin-left: auto;
   padding: 1em;
   border: none;
@@ -128,57 +110,46 @@ body {
   background: none;
   cursor: pointer;
 
-  svg {
+  svg{
     transition: rotate 150ms ease;
   }
 }
-
-#toggle-btn:hover {
+#toggle-btn:hover{
   background-color: var(--hover-clr);
 }
 
-main {
+main{
   padding: min(30px, 7%);
-  justify-content: center;
-  /* Center horizontally */
-  align-items: center;
-  /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   display: flex;
 }
-
-main p {
+main p{
   color: var(--secondary-text-clr);
   margin-top: 5px;
   margin-bottom: 15px;
 }
-
-.container {
+.container{
   border: 1px solid var(--line-clr);
   border-radius: 1em;
   margin-bottom: 20px;
   padding: min(3em, 15%);
 
-  h2,
-  p {
-    margin-top: 1em
-  }
+  h2, p { margin-top: 1em }
 }
 
-@media(max-width: 800px) {
-  body {
+@media(max-width: 800px){
+  body{
     grid-template-columns: 1fr;
   }
-
-  main {
+  main{
     padding: 2em 1em 60px 1em;
   }
-
-  .container {
+  .container{
     border: none;
     padding: 0;
   }
-
-  #sidebar {
+  #sidebar{
     height: 60px;
     width: 100%;
     border-right: none;
@@ -188,7 +159,7 @@ main p {
     top: unset;
     bottom: 0;
 
-    >ul {
+    > ul{
       padding: 0;
       display: grid;
       grid-auto-columns: 60px;
@@ -196,12 +167,10 @@ main p {
       align-items: center;
       overflow-x: scroll;
     }
-
-    ul li {
+    ul li{
       height: 100%;
     }
-
-    ul a {
+    ul a{
       width: 60px;
       height: 60px;
       padding: 0;
@@ -221,10 +190,10 @@ main p {
   padding: 30px;
   padding-left: 50px;
   width: 700px;
-  height: 450px;
-  /* Adjusted height */
-  background-color: #ffffff9c;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: 450px; /* Adjusted height */
+  background-color: #e7e7e7;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
 .profile-header {
@@ -233,7 +202,7 @@ main p {
   width: 100%;
 }
 
-.upload-photo {
+img {
   position: relative;
   width: 80px;
   height: 80px;
@@ -254,29 +223,22 @@ main p {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  display: none;
-  /* Hidden by default */
+  display: none; /* Hidden by default */
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.username,
-.email,
-.dob,
-.services {
+.username, .email, .dob, .services {
   width: 250px;
   padding: 10px;
   font-size: 1.2em;
   border: 1px solid #ccc;
   border-radius: 5px;
-  display: none;
-  /* Initially hidden */
+  display: none; /* Initially hidden */
 }
 
-.email-field,
-.dob-field,
-.services-field {
+.email-field, .dob-field, .services-field {
   display: flex;
   align-items: center;
   width: 100%;
@@ -301,20 +263,12 @@ main p {
   padding: 8px 0;
 }
 
-.profile-info p span,
-.username-span,
-.email-span,
-.dob-span,
-.services-span {
+.profile-info p span, .username-span, .email-span, .dob-span, .services-span {
   position: relative;
   padding-bottom: 5px;
 }
 
-.profile-info p span::after,
-.username-span::after,
-.email-span::after,
-.dob-span::after,
-.services-span::after {
+.profile-info p span::after, .username-span::after, .email-span::after, .dob-span::after, .services-span::after {
   content: '';
   display: block;
   width: 100%;
@@ -327,18 +281,13 @@ main p {
   transition: transform 0.3s ease;
 }
 
-.profile-info p:hover span::after,
-.username-span:hover::after,
-.email-span:hover::after,
-.dob-span:hover::after,
-.services-span:hover::after {
+.profile-info p:hover span::after, .username-span:hover::after, .email-span:hover::after, .dob-span:hover::after, .services-span:hover::after {
   transform: scaleX(0.8);
 }
 
 
 .button-container {
-  margin-top: auto;
-  /* Push buttons to the bottom */
+  margin-top: auto; /* Push buttons to the bottom */
   display: flex;
   justify-content: center;
   width: 100%;
@@ -350,8 +299,7 @@ main p {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
-  margin: 0 10px;
-  /* Space between buttons */
+  margin: 0 10px; /* Space between buttons */
 }
 
 .edit-button {
@@ -360,22 +308,16 @@ main p {
 }
 
 .save-button {
-  background-color: grey;
-  /* Grey color for disabled state */
+  background-color: grey; /* Grey color for disabled state */
   color: white;
-  opacity: 0.5;
-  /* Initially disabled */
-  pointer-events: none;
-  /* Disable pointer events */
+  opacity: 0.5; /* Initially disabled */
+  pointer-events: none; /* Disable pointer events */
 }
 
 .visible-text {
-  font-size: 1.2em;
-  /* Match the size of the rest of the text */
-  margin: 8px 0;
-  /* Consistent margin */
-  color: #555;
-  /* Consistent color */
+  font-size: 1.2em; /* Match the size of the rest of the text */
+  margin: 8px 0; /* Consistent margin */
+  color: #555; /* Consistent color */
 }
 
 .delete-photo {
@@ -386,19 +328,16 @@ main p {
   color: white;
   border: none;
   border-radius: 50%;
-  width: 20px;
-  /* Adjusted size */
-  height: 20px;
-  /* Adjusted size */
+  width: 20px; /* Adjusted size */
+  height: 20px; /* Adjusted size */
   cursor: pointer;
-  display: none;
-  /* Hidden by default */
+  display: none; /* Hidden by default */
   font-size: 18px;
   text-align: center;
 }
 
 .order-container {
-  background: #ffffff9c;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
@@ -409,165 +348,19 @@ main p {
   display: inline-flexbox;
   align-items: center;
 }
-
 .order-header {
   font-size: 1.2em;
   margin-bottom: 10px;
   color: black
 }
-
 .order-detail {
   margin: 5px 0;
 }
 
 #Profile {
-  display: block;
-  /* Show Profile section by default */
+  display: block; /* Show Profile section by default */
 }
 
 #Orders {
-  display: none;
-  /* Hide Orders section by default */
-}
-
-/* Adjust for tablets and smaller screens #e7e7e7e3 */
-@media (max-width: 1024px) {
-  #sidebar {
-    width: 200px;
-  }
-
-  .profile-card {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .username,
-  .email,
-  .dob,
-  .services {
-    width: 100%;
-  }
-}
-
-/* Adjust for mobile screens */
-@media (max-width: 800px) {
-  body {
-    grid-template-columns: 1fr;
-  }
-
-  .p-c {
-    display: none;
-  }
-
-  #sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    background-color: var(--background-color);
-    border-bottom: 1px solid var(--line-clr);
-    z-index: 10;
-  }
-
-  #sidebar ul {
-    display: flex;
-    overflow-x: auto;
-    padding: 0;
-    justify-content: space-around;
-  }
-
-  #sidebar ul li {
-    flex-shrink: 0;
-  }
-
-  #sidebar ul a {
-    width: 60px;
-    height: 60px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  #sidebar a {
-    font-size: 0.9rem;
-    padding: 10px 15px;
-    text-align: center;
-  }
-
-  #thala {
-    display: none;
-  }
-
-  main {
-    padding: 2em 1em 60px 1em;
-  }
-
-  .profile-card {
-    width: 80vw;
-    padding: 1em;
-  }
-
-  #sidebar ul {
-    display: flex;
-    gap: 20px;
-    /* Space between items */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .order-container {
-    width: 82vw;
-  }
-
-  .username,
-  .email,
-  .dob,
-  .services {
-    width: 100%;
-    font-size: 1em;
-  }
-}
-
-/* Smaller mobile screens */
-@media (max-width: 500px) {
-  .profile-card {
-    padding: 1em;
-    font-size: 0.9em;
-    height: 69vh;
-  }
-
-  .profile-header,
-  .email-field,
-  .dob-field,
-  .services-field {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .label {
-    font-size: 1em;
-  }
-
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #sidebar {
-    padding: 5px;
-    justify-content: space-evenly;
-  }
-
-  #sidebar a {
-    font-size: 0.8rem;
-    padding: 8px 10px;
-  }
-
+  display: none; /* Hide Orders section by default */
 }

@@ -179,7 +179,7 @@ function fetchproviderData() {
             <span style="color:black;">${item.dob}</span>
           </div>
           <div class="services-field">
-            <span style="color:black;"> ${item.service}</span>
+             <p style="color:black;">${item.service}</p>
           </div>
           <div class="profile-info">
             <p style="color:black;">${item.dateOfJoining}</p>
