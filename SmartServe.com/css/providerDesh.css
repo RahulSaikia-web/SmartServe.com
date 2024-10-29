@@ -144,7 +144,7 @@ body {
 }
 
 #toggle-btn:hover {
-    background-color: var(--hover-clr);
+    background-color: #2225331a;
 }
 
 main {
