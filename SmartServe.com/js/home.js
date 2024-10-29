@@ -50,21 +50,20 @@ function displayEntries() {
         serviceProvider = json;
 
       // Clear previous content (if any)
-      toAppend.innerHTML = "";
+      const toAppend = document.getElementById('data');
 
       // Append provider information
       for (let infos of serviceProvider) {
         toAppend.innerHTML += `
         <div class="dataContainer">
-      <img src="1.jpg" alt="Uploaded Image"/>
               <div class="data-info">
-                  <h1 style="color: white;">${infos.service_type} <br></h1> <h4>by ${infos.username}</h4>
-                  <h3 style="color: white;">₹ ${infos.price}</h3>
-                  <p style="color: white;"><strong>Address:</strong> ${infos.city}</p>
-                  <p style="color: white;"><strong>Contact No:</strong> ${infos.contact_phone}</p>
-                  <p style="color: white;"><strong>Description:</strong> ${infos.bio}</p>
+                  <h1 style="color: white;">${infos.role} <br></h1> <h4>by ${infos.name}</h4>
+                  
+                  <p style="color: white;"><strong>PinCode:</strong> ${infos.pincode}</p>
+                  <p style="color: white;"><strong>Availability : </strong> ${infos.is_available}</p>
+                  <p style="color: white;"><strong>email:</strong> ${infos.email}</p>
                     <h2 style="color: white;"><br></h2>
-        <div class="btn">  <button onclick="handleBook()">Book</button></div>
+        <div class="btn">  <button onclick="handleBook()" id="bookButton">Book</button></div>
               </div>
               </div>
         `;
@@ -101,8 +100,14 @@ function displayEntries() {
       });
   });
 function handleBook(){
-alert("Booking Success .");
+alert("Booking Success .");// Disable the button
+const button = document.getElementById("bookButton");
+button.disabled = true;
 
+// Re-enable the button after 5 minutes (300,000 milliseconds)
+setTimeout(() => {
+    button.disabled = false;
+}, 300000); // 5 minutes
 }
  // Function to filter entries based on search and selected filters
  function filterEntries() {
