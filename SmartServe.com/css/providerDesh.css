@@ -101,7 +101,7 @@ body {
 }
 
 #sidebar a:hover {
-    background-color: var(--hover-clr);
+    background-color: #2225331a;
 }
 
 #sidebar .sub-menu {
